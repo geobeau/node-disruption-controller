@@ -61,7 +61,7 @@ func main() {
 		"Enable leader election for controller manager. "+
 			"Enabling this will ensure there is only one active controller manager.")
 	flag.BoolVar(&rejectEmptyNodeDisruption, "reject-empty-node-disruption", false, "Reject NodeDisruption matching no actual node.")
-	flag.DurationVar(&retryInterval, "retry-interval", controller.DefaultRetryInterval, "How long to wait between each retry (Default 60s)")
+	flag.DurationVar(&retryInterval, "retry-interval", controller.DefaultRetryInterval, "How long to wait between each retry")
 
 	opts := zap.Options{
 		Development: true,
